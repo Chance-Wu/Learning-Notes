@@ -1,0 +1,5 @@
+一、从互联网搜索
+	http://mvnrepository.com/
+	http://mvnrepository.org/
+
+二、在本地重建索引，以索引的方式来搜

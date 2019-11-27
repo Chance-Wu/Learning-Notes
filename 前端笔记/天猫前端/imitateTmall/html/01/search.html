@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索栏</title>
+		<!-- Jquery 核心JavaScript文件 -->
+		<script src="../../js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<!--  Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+
+	<style>
+		/*搜索栏*/
+		div.searchDiv {
+			background-color: #C40000;
+			/*搜索框div背景色是天猫红#C40000*/
+			width: 400px;
+			/*宽度固定400px*/
+			margin: 50px auto;
+			/*水平居中，并且有50px的上下外边距*/
+			padding: 1px;
+			/*有1px的内边距*/
+			height: 40px;
+			/*高度是40px*/
+			display: block;
+			/*以块状元素显示，只有在以块状元素的时候，水平居中才有效果。当然div默认也是块状元素显示的*/
+		}
+		
+		/*搜索栏中的输入框*/
+		div.searchDiv input {
+			width: 275px;
+			/*宽度275px*/
+			border: 1px solid transparent;
+			/*边框设置成透明的，否则会有边框阴影*/
+			height: 36px;
+			/*高度36px*/
+			margin: 1px;
+			/*外边距设置为1px，看上去输入框和边框之间就有很小的空隙*/
+			outline: none;
+			/*去掉输入框轮廓，否则获取焦点的时候回发生颜色变化*/
+		}
+		
+		/*搜索栏中的按钮*/
+		div.searchDiv button {
+			width: 110px;
+			/*宽度110px，这样加上左边的input的275px的宽度，正好把searchDiv填满*/
+			border: 1px solid transparent;
+			/*边框设置成透明的，否则会有边框阴影*/
+			background-color: #C40000;
+			/*背景色设置成天猫红，和searchDiv融为一体*/
+			color: white;
+			/*字体白色*/
+			font-size: 20px;
+			/*字体大小20px*/
+			font-weight: bold;
+			/*字体加粗*/
+		}
+		
+		/*搜索栏下方的关键字*/
+		div.searchBelow {
+			margin-top: 3px;
+			/*搜索栏下方的div，有3个像素的上外边距*/
+			margin-left: -20px;
+			/*-20个像素的左边距*/
+		}
+		
+		/*关键字之间的竖棒*/
+		div.searchBelow span {
+			color: #999;
+			/*把不同的关键字之间的竖棒设置为灰色*/
+		}
+		
+		/*关键字超链*/
+		div.searchBelow a {
+			padding: 0px 20px 0px 20px;
+			/*超链之间的水平间隔20px*/
+			font-size: 14px;
+			/*超链文字大小14px*/
+		}
+		
+		/*logo图片*/
+		img.logo {
+			position: absolute;
+			/*logo图片使用绝对定位*/
+			left: 0px;
+			/*贴在左边*/
+			top: 30px;
+			/*距离上面30px*/
+			z-index: -1;
+			/*-1表示放在下面，免得图片挡住了输入框*/
+		}
+		
+		/*整个body*/
+		body {
+			font-size: 12px;
+			/*把所有文字的大小调成12px，这是天猫默认的文字大小*/
+			font-family: arial;
+			/*字库使用Arial*/
+		}
+		
+		/*所有超链*/
+		a {
+			color: #999;
+			/*所有的超链，都默认以灰色#999形式 表现出来*/
+		}
+		
+		/*鼠标悬停*/
+		a:hover {
+			text-decoration: none;
+			/*超链鼠标悬停的时候，没有下划线*/
+			color: #C40000;
+			/*超链鼠标悬停的时候，使用天猫红显示*/
+		}
+	</style>
+
+	<div>
+		<a href="#nowhere">
+			<img class="logo" src="../../img/logo.gif" id="logo">
+		</a>
+
+		<div class="searchDiv">
+			<input type="text" placeholder="时尚男鞋 太阳镜" name="keyword" />
+			<button class="searchButton" type="submit">搜索</button>
+			<div class="searchBelow">
+				<span><a href="#nowhere">平衡车</a><span>|</span></span>
+				<span><a href="#nowhere">扫地机器人</a><span>|</span></span>
+				<span><a href="#nowhere">原汁机</a><span>|</span></span>
+				<span><a href="#nowhere">冰箱</a></span>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: 50px;"></div>
+
+</html>

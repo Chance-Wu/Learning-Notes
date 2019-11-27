@@ -1,0 +1,47 @@
+你真的理解clear：both吗 
+在开发中，从美工MM给你Html代码中，肯定能经常看”<div style="clear:both;"></div>”这样的代码，但是你真的能明白它是做什么用的吗？ 
+如： 
+
+代码如下:
+<div style="border:2px solid red;"> 
+<div style="float:left;width:80px;height:80px;border:1px solid blue;">TEST DIV</div> 
+<div style="clear:both;"></div> 
+</div> 
+
+你可以将此部分代码放到一个HTML页面看看效果，然后在去掉”<div style="clear:both;"></div>”看一下效果,就知道这句话的作用了。 
+如图： 
+（1）有clear:both的： 
+
+ 
+
+你真的理解clear：both吗？
+
+ 
+
+（2）无clear:both的
+
+你真的理解clear：both吗？
+这样看，应该就一目了然了：原来后边的Clear:both;其实就是利用清除浮动来把外层的div撑开，所以有时候，我们在将内部div都设置成浮动之后，就会发现，外层div的背景没有显示，原因就是外层的div没有撑开，太小，所以能看到的背景仅限于一条线。 
+
+但这种办法就是最好了的吗？ 
+我这么说，当然答案就不是了。可以采用通过Hack实现： 
+
+复制代码
+代码如下:
+
+<style> 
+.clearfix:after{ 
+visibility: hidden; 
+display: block; 
+font-size: 0; 
+content: "."; 
+clear: both; 
+height: 0; 
+} 
+* html .clearfix{zoom: 1;} 
+*:first-child + html .clearfix{zoom: 1;} 
+</style> 
+<div class="clearfix" style="border: 2px solid red;"> 
+<div style="float: left; width: 80px; height: 80px; border: 1px solid blue;"> 
+TEST DIV</div> 
+</div> 

@@ -1,0 +1,4 @@
+compile		struts2框架
+provided		jsp-api.jar
+runtime		数据库驱动包
+test		junit.jar

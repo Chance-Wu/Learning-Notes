@@ -1,0 +1,12 @@
+一个文件的最终大小依赖于所处的操作系统。
+
+DESKTOP-I91EMDG
+
+TNS_ADMIN
+E:\Professional\PLSQL Developer\instantclient_11_2
+
+查看Oracle后台进程
+select program,status from v$session where type='BACKGROUND';
+
+
+参考书籍《Oracle Design》

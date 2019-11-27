@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<!-- Jquery 核心JavaScript文件 -->
+		<script src="../../js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<!--  Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+
+	<style>
+		/*分类和轮播总体*/
+		div.categoryWithCarousel {
+			width: 100%;
+			/*宽度100%*/
+			position: relative;
+			/*把这个div设计为相对定位，是因为在后面的carouselBackGroundDiv是基于这个div进行绝对定位的*/
+		}
+		
+		/*导航条*/
+		div.categoryWithCarousel div.headbar {
+			background-color: #DD2727;
+			/*背景色比天猫红淡一点*/
+		}
+		
+		/*导航条中的商品分类字样*/
+		div.categoryWithCarousel div.head {
+			width: 200px;
+			/*宽度200px*/
+			background-color: #C60A0A;
+			/*背景色比导航条深一点*/
+			height: 36px;
+			/*高度36px*/
+			line-height: 36px;
+			/*行高36px，这样文字可以垂直居中*/
+			font-size: 16px;
+			/*字体大小16px*/
+			font-weight: bold;
+			/*粗体*/
+			color: white;
+			/*白色字体*/
+			margin-left: 20px;
+			/*左边距*/
+			display: inline-block;
+			/*设置为内联块，即可以做到不换行水平摆放，也可以设置大小*/
+		}
+		
+		/*导航条右侧子菜单*/	
+		div.categoryWithCarousel div.rightMenu {
+			display: inline-block;
+			/*右侧子菜单设置为内联块,即可以做到不换行水平摆放,也可以设置大小*/
+		}
+		
+		/*导航中的超链*/
+		div.categoryWithCarousel div.rightMenu a {
+			font-size: 16px;
+			/*文字大小16px*/
+			color: white;
+			/*文字颜色白色*/
+			text-decoration: none;
+			/*没有下划线*/
+		}
+		
+		/*导航中的span*/
+		div.categoryWithCarousel div.rightMenu span {
+			margin: 0px 20px 0px 20px;
+			/*文字之间的距离20px*/
+		}
+		
+		/*天猫超市和天猫国际图片*/
+		div.categoryWithCarousel div.rightMenu img {
+			height: 30px;
+			/*高度30px，把图片变小*/
+		}
+		
+		/*轮播div*/		
+		div.carousel-of-product {
+			height: 510px;
+			/*高度510px*/
+			width: 1024px;
+			宽度1024px,
+			设置宽度是为了配合下面的margin实现居中效果 margin: 0px auto;
+			/*元素居中*/
+		}
+		
+		/*轮播中的图片*/
+		imag.carouselImage {
+			height: 510px !important;
+			/*图片的高度设置为和轮播div的高度一样*/
+		}
+		
+		/*和图片一样颜色的背景div(当高分辨率，比如1920px的时候会看不见，不然会被轮播遮挡)*/
+		div.carouselBackgroundDiv {
+			width: 100%;
+			/*宽度100%*/
+			height: 510px;
+			/*高度510px*/
+			background-color: #E8E8E8;
+			/*背景色和图片的背景色一致*/
+			position: absolute;
+			/*绝对定位*/
+			top: 36px;
+			/*向下移动36px*/
+			z-index: -1;
+			/*表示在轮播图片的下方*/
+		}
+	</style>
+	
+	<div class="categoryWithCarousel">
+		<div class="headbar">
+			<div class="head">
+				<span class="glyphicon glyphicon-th-list" style="margin-left: 10px;"></span>
+				<span style="margin-left: 10px;">商品分类</span>
+			</div>
+	
+			<div class="rightMenu">
+				<span><a href="#nowhere"><img src="../../img/chaoshi.png"></a></span>
+				<span><a href="#nowhere"><img src="../../img/guoji.png"></a></span>
+				<span><a href="#nowhere">天猫会员</a></span>
+				<span><a href="#nowhere">电器城</a></span>
+				<span><a href="#nowhere">喵鲜生</a></span>
+				<span><a href="#nowhere">医药馆</a></span>
+				<span><a href="#nowhere">营业厅</a></span>
+				<span><a href="#nowhere">魅力惠</a></span>
+				<span><a href="#nowhere">飞猪旅行</a></span>
+				<span><a href="#nowhere">苏宁易购</a></span>
+			</div>
+		</div>
+	
+		<!-- Bootstrap轮播（Carousel）插件 -->
+		<div data-ride="carousel" class="carousel-of-product carousel slide" id="carousel-of-product">
+			<!-- 轮播(Carousel)指标(indicators) -->
+			<ol class="carousel-indicators">
+				<li class="active" data-slide-to="0" data-target="#carousel-of-product"></li>
+				<li data-slide-to="1" data-target="#carousel-of-product" class=""></li>
+				<li data-slide-to="2" data-target="#carousel-of-product" class=""></li>
+				<li data-slide-to="3" data-target="#carousel-of-product" class=""></li>
+			</ol>
+			<!-- Wrapper for slides(幻灯片包装) -->
+			<div role="listbox" class="carousel-inner">
+				<div class="item active">
+					<img src="../../img/1.jpg" class="carousel carouselImage">
+				</div>
+				<div class="item">
+					<img src="../../img/2.jpg" class="carouselImage">
+				</div>
+				<div class="item">
+					<img src="../../img/3.jpg" class="carouselImage">
+				</div>
+				<div class="item">
+					<img src="../../img/4.jpg" class="carouselImage">
+				</div>
+			</div>
+		</div>
+	
+		<div class="carouselBackgroundDiv"></div>
+	</div>
+
+</html>

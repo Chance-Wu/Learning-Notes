@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>置顶导航</title>
+		<!-- Jquery 核心JavaScript文件 -->
+		<script src="../../js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<!--  Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+
+	<style>
+		/*整个body*/
+		
+		body {
+			font-size: 12px;
+			/*把所有文字的大小调成12px，这是天猫默认文字的大小*/
+			font-family: arial;
+			/*字库使用Arial*/
+		}
+		/*所有超链接*/
+		
+		a {
+			color: #999;
+			/*所有超链接，都以灰色#999形式表现出来*/
+		}
+		/*天猫红*/
+		
+		.redColor {
+			color: #C40000 !important;
+			/*天猫整个网站使用的天猫红都是#C40000，这里首页和购物车图标使用了本样式*/
+		}
+		/*置顶导航nav*/
+		
+		nav.top {
+			background-color: #F2F2F2;
+			/*背景色#F2F2F2*/
+			padding-top: 5px;
+			/*上内边距是5px*/
+			padding-bottom: 5px;
+			/*下内边距是5px*/
+			border-bottom: 1px solid #E7E7E7;
+			/*下边缘有1个像素的实线边框，颜色是比背景色#F2F2F2略深的#E7E7E7*/
+		}
+		/*置顶导航栏里的span和超链*/
+		
+		nav.top span,
+		nav.top a {
+			color: #999;
+			/*颜色#999*/
+			margin: 0px 10px 0px 10px;
+			/*并且有左右外边距10px，但是没有上下外边距*/
+		}
+		/*超链悬停*/
+		
+		nav.top a:hover {
+			color: #C40000;
+			/*当鼠标移动到超链接上的时候，颜色变为天猫红#C40000*/
+			text-decoration: none;
+			/*去掉下划线*/
+		}
+	</style>
+
+	<nav class="top">
+		<a href="#nowhere">
+			<span class="glyphicon glyphicon-home redColor"></span> 天猫首页
+		</a>
+
+		<span>喵，欢迎来到天猫！</span>
+		<a href="#nowhere">请登录</a>
+		<a href="#nowhere">免费注册</a>
+
+		<span class="pull-right">
+			<a href="#nowhere">我的订单</a>
+			<a href="#nowhere">
+				<span class="glyphicon glyphicon-shopping-cart redColor"></span> 购物车
+		<strong>0</strong>件
+		</a>
+		</span>
+
+	</nav>
+
+</html>

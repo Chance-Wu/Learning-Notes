@@ -1,0 +1,7 @@
+border属性
+
+border: 1px solid transparent 等同于以下
+border-width: 1px;
+border-style: solid;
+border-color: transparent；
+所以是指的边框的颜色，而transparent则设为了透明。

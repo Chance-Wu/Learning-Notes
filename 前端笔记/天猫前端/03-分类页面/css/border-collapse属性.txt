@@ -1,0 +1,8 @@
+border-collapse属性
+
+定义和用法：
+border-collapse属性设置表格的边框是否被合并为一个单一的边框，还是象在标准的 HTML 中那样分开显示。
+
+-separate：默认值。边框会被分开。不会忽略 border-spacing 和 empty-cells 属性。
+-collapse：如果可能，边框会合并为一个单一的边框。会忽略 border-spacing 和 empty-cells 属性。
+-inherit：规定应该从父元素继承 border-collapse 属性的值。

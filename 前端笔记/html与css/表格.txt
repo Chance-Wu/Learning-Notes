@@ -1,0 +1,16 @@
+<table>标签
+
+定义和用法：
+定义HTML表格。
+简单的HTML表格由table元素以及一个或多个tr、th或td元素组成。
+
+tr——表格行，包含一个或多个th或td。
+th——表头
+td——表格单元
+
+更复杂的可能包括caption、col、colgroup、thead、tfoot以及tbody元素。
+
+thead——表格的表头。应该与tbody和tfoot元素结合使用。
+tbody——用于对 HTML 表格中的主体内容进行分组
+tfoot——用于对 HTML 表格中的表注（页脚）内容进行分组。
+注：如果您使用 thead、tfoot 以及 tbody 元素，您就必须使用全部的元素。它们的出现次序是：thead、tfoot、tbody，这样浏览器就可以在收到所有数据前呈现页脚了。您必须在 table 元素内部使用这些标签。

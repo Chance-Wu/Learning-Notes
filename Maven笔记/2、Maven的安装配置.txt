@@ -1,0 +1,10 @@
+配置环境变量
+
+mvn -v
+
+MAVEN仓库（三种仓库）
+1）本地仓库 自己维护
+	本地仓库的配置只需要修改settings.xml文件就可以
+	<localRepository>E:\repository</localRepository>
+2）远程仓库（私服） 公司维护
+3）中央仓库 maven团队维护     两个亿

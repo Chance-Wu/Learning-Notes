@@ -1,0 +1,6 @@
+mvn clean		清理编译的文件
+mvn compile		编译了主目录的文件
+mvn test		编译并运行了test目录的代码
+mvn package		打包
+mvn install		就是把项目发布到本地仓库
+mvn tomcat:run	一键启动

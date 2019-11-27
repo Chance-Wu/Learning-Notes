@@ -1,0 +1,12 @@
+compile	test	package	install	deploy
+三种生命周期
+1）Clean生命周期
+Clean
+2）Default生命周期
+Compile   test  package  install  deploy
+3）Site生命周期
+Site
+
+命令和生命周期的阶段的关系
+不同的生命周期的命令可以同时执行
+mvn clean package

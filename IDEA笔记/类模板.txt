@@ -1,0 +1,14 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")
+    package ${PACKAGE_NAME};
+#end
+
+/**
+ * 〈一句话功能简述〉<br> 
+ * 〈${DESCRIPTION}〉
+ *
+ * @author   ${USER}
+ * @since 1.0.0
+ */
+public class ${NAME} {
+
+}

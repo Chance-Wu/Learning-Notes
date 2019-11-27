@@ -1,0 +1,33 @@
+Maven是apache下的一个开源项目，是纯java开发，并且只是用来管理java项目的。
+
+分析：maven项目为什么这么小？没有jar。 需要jar吗？肯定需要。没有存在于maven项目里面，jar存在于哪？
+
+优点：
+1）依赖管理 
+就是对jar包的统一管理  可以节省空间
+
+2）项目一键构建
+一个tomcat:run就能把项目运行起来
+Maven能干的事：
+编译  测试(junit)  运行  打包  部署
+
+3）可以跨平台
+
+4）应用于大型项目，提高开发效率
+分析：
+用户管理    订单管理   支付管理   。。。。。
+Maven的分模块开发
+互联网项目 按业务分
+传统项目   按层分 entity  dao  service  web
+
+MAVEN的目录结构
+maven项目的核心文件：pom.xml
+src
+      -main			主目录
+	-java		放的java代码
+	-resources	配置文件（properties、xml）
+	-webapp
+
+      -test			测试目录
+	-java		纯java代码	junit测试
+	-resources	junit测试所用的配置文件，如果里面没有配置文件默认从main里找

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>页脚一</title>
+		<script src="../../js/jquery-3.3.1.min.js"></script>
+		<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+
+	<style>
+		/*页脚div*/
+		div.footer{
+			margin: 0px 0px;
+			/*无外边距*/
+			border-top-style: solid;
+			/*上边框实线*/
+			border-top-width: 1px;
+			/*上边框1个像素*/
+			border-top-color: #E7E7E7;
+			/*上边框颜色*/
+		}
+		
+		/*品质保障图片所在div*/
+		div.footer_ensure{
+			margin-top: 24px;
+			/*上外边距*/
+			margin-bottom: 24px;
+			/*下外边距*/
+			text-align: center;
+			/*图片居中*/
+		}
+		
+		/*五个超链所在div*/
+		div.footer_desc{
+			border-top-style: solid;
+			/*上边框实线*/
+			border-top-width: 1px;
+			/*上边框1个像素*/
+			border-color: #E7E7E7;
+			/*上边框颜色*/
+			padding-top: 30px;
+			/*上内边距*/
+			margin: 0px 20px;
+			/*左右外边距*/
+		}
+		
+		/*购物指南，天猫保障等系列*/
+		div.footer_desc div.descColumn{
+			width: 20%;
+			/*刚好5列，所有没类占用20%*/
+			float: left;
+			/*漂浮起来，使得这些水平摆放*/
+			padding-left: 15px;
+			/*左内边距15px*/
+		}
+		
+		/*购物指南等字样*/
+		div.footer_desc div.descColumn span.descColumnTitle{
+			color: #646464;
+			/*颜色*/
+			font-size: 16px;
+			/*粗体*/
+			font-weight: bold;
+			/*文本大小16px*/
+		}
+		
+		/*超链*/
+		div.footer_desc a{
+			display: block;
+			/*超链默认是inline，会水平摆放，改成block出现换行效果*/
+			padding-top: 3px;
+			/*3px上内边距*/
+		}
+		
+		/*整个body*/
+		body{
+			font-size: 12px;
+			/*把所有文字的大小调成12px，这是天猫默认文字的大小*/
+			font-family: arial;
+			/*字库使用Arail*/
+		}
+		
+		/*所有超链*/
+		a{
+			color: #999;
+			/*所有的超链,都默认以灰色#999形式表现出来*/
+		}
+		
+		/*鼠标悬停*/
+		a:hover{
+			text-decoration: none;
+			/*超链鼠标悬停的时候，没有下划线*/
+			color: #C40000;
+			/*超链鼠标悬停的时候，使用天猫红显示*/
+		}
+	</style>
+
+	<div style="display: block;" class="footer" id="footer">
+		<div class="footer_ensure" id="footer_ensure">
+			<a href="#nowhere">
+				<img src="../../img/ensure.png" />
+			</a>
+		</div>
+
+		<div class="footer_desc" id="footer_desc">
+			<div class="descColumn">
+				<span class="descColumnTitle">购物指南</span>
+				<a href="#nowhere">免费注册</a>
+				<a href="#nowhere">开通支付宝</a>
+				<a href="#nowhere">支付宝充值</a>
+			</div>
+
+			<div class="descColumn">
+				<span class="descColumnTitle">天猫保障</span>
+				<a href="#nowhere">发票保障</a>
+				<a href="#nowhere">售后规则</a>
+				<a href="#nowhere">缺货赔付</a>
+			</div>
+
+			<div class="descColumn">
+				<span class="descColumnTitle">支付方式</span>
+				<a href="#nowhere">快捷支付</a>
+				<a href="#nowhere">信用卡</a>
+				<a href="#nowhere">余额宝</a>
+				<a href="#nowhere">蚂蚁花呗</a>
+				<a href="#nowhere">货到付款</a>
+			</div>
+
+			<div class="descColumn">
+				<span class="descColumnTitle">商家服务</span>
+				<a href="#nowhere">天猫规则</a>
+				<a href="#nowhere">商家入驻</a>
+				<a href="#nowhere">商家中心</a>
+				<a href="#nowhere">天猫智库</a>
+				<a href="#nowhere">物流服务</a>
+				<a href="#nowhere">喵言喵语</a>
+				<a href="#nowhere">运营服务</a>
+			</div>
+
+			<div class="descColumn">
+				<span class="descColumnTitle">手机天猫</span>
+				<a href="#nowhere">
+					<img src="../../img/ma.png">
+				</a>
+			</div>
+		</div>
+		<!--清除浮动CSS和DIV代码-->
+		<div style="clear: both"></div>
+	</div>
+
+</html>

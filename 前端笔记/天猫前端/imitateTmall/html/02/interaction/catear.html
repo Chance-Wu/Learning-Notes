@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<title>首页</title>
+		<!-- Jquery 核心JavaScript文件 -->
+		<script src="../../../js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="../../../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<!--  Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="../../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+
+	<style>
+		/*整个body*/
+		body {
+			font-size: 12px;
+			/*文字大小*/
+			font-family: Arial;
+			/*字库使用Arial*/
+		}
+		
+		/*超链*/
+		a {
+			color: #999;
+		}
+		
+		/*超链悬浮*/
+		a:hover {
+			text-decoration: none;
+			/*无下划线*/
+			color: #C40000;
+			
+		}
+		
+		/*产品图片鼠标悬停状态*/
+		div.productItem img:hover {
+			opacity: 0.7;
+			/*变亮*/
+			filter: alpha(opacity=70);
+			/*火狐浏览器下变亮*/
+		}
+		
+		/**/
+		div.categoryWithCarousel div.eachCategory {
+			line-height: 30px;
+			padding-left: 10px;
+			font-size: 14px;
+		}
+		
+		/**/
+		div.productItem {
+			width: 189px;
+			height: 285px;
+			border: 1px solid white;
+			background-color: white;
+			margin: 8px 4px;
+			float: left;
+			cursor: pointer;
+		}
+		
+		div.categoryWithCarousel div.carouselAboutProduct {
+			width: 600px;
+			display: inline-block;
+		}
+		
+		div.carousel-of-product {
+			max-width: 100%;
+			height: 510px;
+		}
+		
+		div.productItem span.productPrice {
+			font-size: 16px;
+			color: #FF003A;
+			display: block;
+			padding-left: 16px;
+			margin-top: -10px;
+		}
+		
+		img.carouselImage {
+			height: 510px !important;
+		}
+		
+		div.productsAsideCategorys div.row div.seperator {
+			margin-top: 20px;
+			border-bottom-style: dashed;
+			border-bottom-width: 1px;
+			border-bottom-color: #e7e7e7;
+		}
+		
+		div.eachHomepageCategoryProducts {
+			margin: 0px 0px 40px 0px;
+		}
+		
+		div.productsAsideCategorys a:hover {
+			color: #C40000;
+			text-decoration: none;
+		}
+		
+		div.left-mark {
+			display: inline-block;
+			height: 20px;
+			vertical-align: top;
+			width: 5px;
+			background-color: #19C8A9;
+		}
+		
+		span.categoryTitle {
+			font-size: 16px;
+			margin-left: 30px;
+			color: #646464;
+			font-weight: bold;
+		}
+		
+		div.categoryWithCarousel {
+			width: 100%;
+		}
+		
+		div.categoryWithCarousel div.categoryMenu {
+			width: 200px;
+			background-color: #e2e2e3;
+			margin-left: 20px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+		}
+		
+		div.productUnit span.productPrice {
+			font-size: 20px;
+			color: #CC0000;
+			display: block;
+			padding-left: 4px;
+		}
+		
+		div.categoryWithCarousel div.productsAsideCategorys {
+			width: 800px;
+			height: 510px;
+			background-color: white;
+			margin-left: 220px;
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+		}
+		
+		div.categoryWithCarousel div.rightMenu img {
+			height: 30px;
+		}
+		
+		img.endpng {
+			display: block;
+			width: 82px;
+			margin: 0 auto;
+		}
+		
+		div.categoryWithCarousel div.eachCategory:hover {
+			background-color: white;
+		}
+		
+		div.categoryWithCarousel div.head {
+			width: 200px;
+			background-color: #C60A0A;
+			height: 36px;
+			line-height: 36px;
+			font-size: 16px;
+			font-weight: bold;
+			color: white;
+			margin-left: 20px;
+			display: inline-block;
+		}
+		
+		div.categoryWithCarousel div.headbar {
+			background-color: #DD2727;
+		}
+		
+		img.catear {
+			position: absolute;
+			height: 15px;
+			display: none;
+		}
+		
+		div.categoryWithCarousel div.rightMenu {
+			display: inline-block;
+		}
+		
+		div.categoryWithCarousel div.rightMenu a {
+			font-size: 16px;
+			color: white;
+		}
+		
+		div.categoryMenu a:hover {
+			color: lightskyblue;
+			text-decoration: none;
+		}
+		
+		div.categoryWithCarousel div.rightMenu span {
+			margin: 0px 20px 0px 20px;
+		}
+		
+		div.categoryWithCarousel div.eachCategory span {
+			margin-right: 10px;
+		}
+		
+		div.productsAsideCategorys a {
+			color: #999;
+			font-size: 14px;
+			margin: 8px;
+		}
+		
+		div.homepageCategoryProducts {
+			background-color: #F5F5F5;
+			padding: 50px 10px 50px 10px;
+			margin: 10px auto;
+			max-width: 1013px;
+		}
+		
+		div.productItem span.productItemDesc {
+			font-size: 12px;
+			color: #666666;
+			display: block;
+			padding: 16px;
+		}
+		
+		div.categoryMenu a {
+			color: #000;
+		}
+		
+		div.productItem img {
+			width: 187px;
+			height: 190px;
+		}
+		
+		nav.top div.row div {
+			background-color: lightgray;
+			border: 1px solid gray;
+			text-align: center;
+		}
+		
+		a.productItemDescLink {
+			display: inline-block;
+			height: 66px;
+		}
+		
+		nav.top div.row div {
+			margin: 5px 0px;
+		}
+		
+		div.productsAsideCategorys div.row {
+			margin: 20px 80px 0px 80px;
+		}
+	</style>
+
+	<div class="homepageDiv">
+
+		<div style="height:50px"></div>
+		<img class="catear" id="catear" src="../../../img/catear.png" style="left: 260.5px; top: 159.65px; display: none;">
+		<div class="categoryWithCarousel">
+			<div class="headbar show1">
+				<div class="head">
+					<span class="glyphicon glyphicon-th-list" style="margin-left:10px"></span>
+					<span style="margin-left:10px">商品分类</span>
+				</div>
+				<div class="rightMenu">
+					<span><a href="#nowhere"><img src="../../../img/chaoshi.png"></a></span>
+					<span><a href="#nowhere"><img src="../../../img/guoji.png"></a></span>
+					<span><a href="#nowhere">天猫会员</a></span>
+					<span><a href="#nowhere">电器城</a></span>
+					<span><a href="#nowhere">喵鲜生</a></span>
+					<span><a href="#nowhere">医药馆</a></span>
+					<span><a href="#nowhere">营业厅</a></span>
+					<span><a href="#nowhere">魅力惠</a></span>
+					<span><a href="#nowhere">飞猪旅行</a></span>
+					<span><a href="#nowhere">苏宁易购</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function() {
+			/*但是鼠标进入span，mouseenter不区分子元素，
+			 * 即就算进入了span的子元素，也算是在span里面，不管子元素这个说法*/
+			$("div.rightMenu span").mouseenter(function() {
+				var left = $(this).position().left;/*获取当前元素的x坐标*/
+				var top = $(this).position().top;/*获取当前元素的y坐标*/
+				var width = $(this).css("width");/*获取当前元素的宽度*/
+				//定义猫耳朵的x坐标
+				var destLeft = parseInt(left) + parseInt(width) / 2;
+				$("img#catear").css("left", destLeft);/*通过$()获取元素后，在通过css()直接设置样式*/
+				$("img#catear").css("top", top - 20);
+				$("img#catear").fadeIn(500);/*延时500毫秒，淡入*/
+			});
+			
+			/*当鼠标离开span元素，隐藏猫耳朵*/
+			$("div.rightMenu span").mouseleave(function() {/*当鼠标离开span元素，隐藏猫耳朵*/
+				$("img#catear").hide();
+			});
+		});
+	</script>
+
+</html>

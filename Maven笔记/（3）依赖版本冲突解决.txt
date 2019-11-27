@@ -1,0 +1,25 @@
+（1）路径近者优先原则
+自己添加一个依赖
+
+（2）第一声明者优先原则
+哪个依赖在前用哪个
+
+（3）排除原则
+<!-- 排除 -->
+<exclusions>
+	<exclusion>
+		<groupId>org.springframework</groupId>
+  		<artifactId>spring-beans</artifactId>
+  	</exclusion>
+</exclusions>
+
+（4）版本锁定
+<dependencyManagement>
+	<dependencies>
+  		<dependency>
+  			<groupId>org.springframework</groupId>
+  			<artifactId>spring-beans</artifactId>
+  			<version>4.2.4.RELEASE</version>
+  		</dependency>
+	</dependencies>
+</dependencyManagement>

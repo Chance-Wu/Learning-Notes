@@ -1,0 +1,26 @@
+<modelVersion>
+
+坐标	GAV
+<groupId>com.sglm.ssh</groupId>
+<artifactId>ssh</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+
+<packaging>war</packaging>	打包方式
+jar	var	pom
+
+依赖
+<dependencies>
+	<dependency>
+	</dependency>
+</dependencies>
+
+插件
+<build>
+	<plugins>
+		<plugin>
+		</plugin>
+	</plugins>
+</build>
+
+
+依赖传递
